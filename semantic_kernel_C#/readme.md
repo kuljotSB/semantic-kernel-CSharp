@@ -4,6 +4,7 @@
 
 This project is aimed at developing a semantic kernel for C# programming language. The semantic kernel provides makes up for the orchestration engine allowing developers to build their own customizable and extensible AI agents.
 
+![alt text] (https://github.com/kuljotSB/assets/blob/main/enterprise-ready.png)
 ## Installation
 
 To use the semantic kernel for C#, follow these steps:
