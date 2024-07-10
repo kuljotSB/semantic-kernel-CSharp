@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP VICTUS\\Downloads\\semantic-kernel-CSharp\\semantic_kernel_C#\\code-samples\\00-introduction\\00-introduction.csproj": {}
+    "C:\\Users\\HP VICTUS\\Downloads\\semantic-kernel-CSharp\\semantic_kernel_C#\\code-samples\\04-WebSearcherPlugin\\04-WebSearcherPlugin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP VICTUS\\Downloads\\semantic-kernel-CSharp\\semantic_kernel_C#\\code-samples\\00-introduction\\00-introduction.csproj": {
+    "C:\\Users\\HP VICTUS\\Downloads\\semantic-kernel-CSharp\\semantic_kernel_C#\\code-samples\\04-WebSearcherPlugin\\04-WebSearcherPlugin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP VICTUS\\Downloads\\semantic-kernel-CSharp\\semantic_kernel_C#\\code-samples\\00-introduction\\00-introduction.csproj",
-        "projectName": "00-introduction",
-        "projectPath": "C:\\Users\\HP VICTUS\\Downloads\\semantic-kernel-CSharp\\semantic_kernel_C#\\code-samples\\00-introduction\\00-introduction.csproj",
+        "projectUniqueName": "C:\\Users\\HP VICTUS\\Downloads\\semantic-kernel-CSharp\\semantic_kernel_C#\\code-samples\\04-WebSearcherPlugin\\04-WebSearcherPlugin.csproj",
+        "projectName": "04-WebSearcherPlugin",
+        "projectPath": "C:\\Users\\HP VICTUS\\Downloads\\semantic-kernel-CSharp\\semantic_kernel_C#\\code-samples\\04-WebSearcherPlugin\\04-WebSearcherPlugin.csproj",
         "packagesPath": "C:\\Users\\HP VICTUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP VICTUS\\Downloads\\semantic-kernel-CSharp\\semantic_kernel_C#\\code-samples\\00-introduction\\obj\\",
+        "outputPath": "C:\\Users\\HP VICTUS\\Downloads\\semantic-kernel-CSharp\\semantic_kernel_C#\\code-samples\\04-WebSearcherPlugin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP VICTUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,7 +48,7 @@
           "dependencies": {
             "Azure.AI.OpenAI": {
               "target": "Package",
-              "version": "[1.0.0-beta.15, )"
+              "version": "[1.0.0-beta.17, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -61,6 +61,14 @@
             "Microsoft.SemanticKernel": {
               "target": "Package",
               "version": "[1.11.1, )"
+            },
+            "Microsoft.SemanticKernel.Plugins.Core": {
+              "target": "Package",
+              "version": "[1.11.1-alpha, )"
+            },
+            "Microsoft.SemanticKernel.Plugins.Web": {
+              "target": "Package",
+              "version": "[1.11.1-alpha, )"
             }
           },
           "imports": [
