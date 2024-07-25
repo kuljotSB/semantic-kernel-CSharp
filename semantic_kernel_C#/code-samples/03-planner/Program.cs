@@ -9,6 +9,7 @@ using Kernel = Microsoft.SemanticKernel.Kernel;
 using Microsoft.SemanticKernel.Planning.Handlebars;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
+using Microsoft.SemanticKernel.Planning.Handlebars;
 
 public  class Globals 
 {
@@ -24,21 +25,10 @@ public static class Program
     public static async Task Main()
     {
 
-        var builder = Kernel.CreateBuilder();
         
-
-        builder.AddAzureOpenAIChatCompletion(Globals.model, Globals.endpoint, Globals.key);
-        var kernel = builder.Build();
-
-        var chatCompletionService = kernel.GetRequiredService<IChatCompletionService>();
-
-        OpenAIPromptExecutionSettings openAIPromptExecutionSettings = new() 
-        {
-            ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions
-        };
-
-        var history = new ChatHistory();
-
+       var builder = Kernel.CreateBuilder();
+       builder.AddAzureOpenAIChatCompletion(Globals.model, Globals.endpoint, Globals.key);
+       var kernel = builder.Build();
        
         var GetCurrentDirectory = Directory.GetCurrentDirectory();
         var ParentDirectory = Directory.GetParent(GetCurrentDirectory);
@@ -50,15 +40,25 @@ public static class Program
         string fileContent =  File.ReadAllText(filePath);
 
         string ask = $"summarise this text: {fileContent} and email it to sam@gmail.com";
+        
+        Console.WriteLine("Asking A Response From The GPT Engine!!!");
+        
+        var planner = new HandlebarsPlanner(new HandlebarsPlannerOptions() { AllowLoops = true });
+        var plan = await planner.CreatePlanAsync(kernel, ask);
 
-        history.AddUserMessage(ask);
+        var serializedPlan = plan.ToString();
 
-        var result = await chatCompletionService.GetChatMessageContentAsync(
-        history,
-        executionSettings: openAIPromptExecutionSettings,
-        kernel: kernel);
+        var result = await plan.InvokeAsync(kernel);
 
-        Console.WriteLine(result);
+        var chatResponse = result.ToString();
+
+        Console.WriteLine("THE PLAN IS:" );
+        Console.WriteLine(serializedPlan);
+
+        Console.WriteLine("RESPONSE FROM CHAT ENGINE: ");
+        Console.WriteLine(chatResponse);
+
+        
 
         
 

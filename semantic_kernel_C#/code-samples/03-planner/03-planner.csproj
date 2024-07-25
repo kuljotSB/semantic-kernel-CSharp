@@ -16,6 +16,10 @@
     <PackageReference Include="Microsoft.SemanticKernel.Planners.Handlebars" Version="1.11.1-preview" />
   </ItemGroup>
 
+   <PropertyGroup>
+  <NoWarn>$(NoWarn);SKEXP0001,SKEXP0010,SKEXP0060, SKEXP0050</NoWarn>
+</PropertyGroup>
+
    <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

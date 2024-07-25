@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7YpEogCv7yU=",
+  "dgSpecHash": "pM9YXEuvVYs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP VICTUS\\Downloads\\semantic_kernel_C#\\code-samples\\03-planner\\03-planner.csproj",
+  "projectFilePath": "C:\\Users\\HP VICTUS\\Downloads\\semantic-kernel-CSharp-1\\semantic_kernel_C#\\code-samples\\03-planner\\03-planner.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP VICTUS\\.nuget\\packages\\azure.ai.openai\\1.0.0-beta.15\\azure.ai.openai.1.0.0-beta.15.nupkg.sha512",
     "C:\\Users\\HP VICTUS\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = _03_planner
-build_property.ProjectDir = C:\Users\HP VICTUS\Downloads\semantic_kernel_C#\code-samples\03-planner\
+build_property.ProjectDir = C:\Users\HP VICTUS\Downloads\semantic-kernel-CSharp-1\semantic_kernel_C#\code-samples\03-planner\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
